@@ -76,7 +76,7 @@ numbers.splice(0,numbers.length);
 
 console.log(numbers);
 console.log(number2);
-*/
+
 
 //                  Combining and Slicing Arrays
 let first = [1,2,3];
@@ -85,19 +85,38 @@ let second = [4,5,6];
 let combined = first.concat(second);
 console.log(combined);
 
-let sliced = combined.slice(2,3);
+let sliced = combined.slice(2,4);
 console.log(sliced);
 
-let courses = [
+let info = [
     {no:8, firstname:'Ritik'},
     {no:26, firstname:'Anisha'}
 ];
-let course2 = [
+let info1 = [
     {no:15, firstname:'Sahisha'},
     {no:5, firstname:'yeahhh'}
 ];
-let objCombined = courses.concat(course2);
+let objCombined = info.concat(info1);
 console.log(objCombined);
 
 let objSliced = objCombined.slice(3);
 console.log(objSliced);
+
+let Scombined = [...first, 'a', false, ...second, 'b', true];
+console.log(Scombined);
+
+
+//                  Iteration on an array
+let arr = [10,20,30,40,50];
+
+//Method-1
+for(let val of arr){
+    console.log(val);
+}
+//Method-2
+arr.forEach(function(number){
+    console.log(number);
+});
+//arr.forEach(number => console.log(number));
+*/
+

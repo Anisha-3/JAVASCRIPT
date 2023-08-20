@@ -160,11 +160,19 @@ let src = {
     b: 20,
     c: 30
 };
-
 let dest = {...src};
 console.log(dest);
 src.a++;
 console.log(dest);
+
+const obj1 = { foo: "bar", x: 42 };
+const obj2 = { foo: "baz", y: 13 };
+
+const clonedObj = { ...obj1 };
+console.log(clonedObj);
+
+const mergedObj = { ...obj1, ...obj2 };
+console.log(mergedObj);
 
 
 //primitive string
