@@ -118,5 +118,43 @@ arr.forEach(function(number){
     console.log(number);
 });
 //arr.forEach(number => console.log(number));
-*/
 
+
+//                  Joining Arrays
+let number2 = [10,20,30,40,50];
+const joined = number2.join(',');
+console.log(joined);
+
+//                  Split string into an array
+let message = 'This is my first message';
+let parts = message.split(' ');
+console.log(parts);
+
+
+//                  Filtering Arrays
+
+let number3 = [1,2,-1,-4];
+
+let filtered = number3.filter(value => value >= 0);
+console.log(filtered);
+
+
+
+//                  Mapping Arrays
+let number4 = [7,8,9,10];
+
+let items = number4.map(value => 'student_no ' + value);
+console.log(items);
+//      Mapping with Objects
+let number5 = [1,2,-6,-9];
+
+let filtered1 = number5.filter(value => value >= 0);
+
+let item1 = filtered1.map(function(element){
+    return {value: element};
+});
+
+//let item1 = number5.filter(value => value >= 0).map(element => {value: element});
+
+console.log(item1);
+*/
