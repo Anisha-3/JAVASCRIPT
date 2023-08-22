@@ -84,7 +84,7 @@ console.log(person.fullName);
 //Calling setter
 person.fullName = 'Sahil Bisht'
 console.log(person.fullName);
-*/
+
 
 //              try-catch block
 
@@ -111,3 +111,42 @@ catch(e){
 }
 
 console.log(person.fullName);
+
+
+
+//          Function Scope
+
+function walk() {
+    var a = 5;
+    console.log(a);
+}
+
+//console.log(a);       // Error :- ReferenceError: a is not defined
+
+
+// The following variables are defined in the global scope
+const num1 = 20;
+const num2 = 3;
+const name = "Chia";
+
+// This function is defined in the global scope
+function multiply() {
+  return num1 * num2;
+}
+
+console.log(multiply()); // 60
+
+// A nested function example
+function getScore() {
+  const num1 = 2;
+  const num2 = 3;
+
+  function add() {
+    return `${name} scored ${num1 + num2}`;
+  }
+
+  return add();
+}
+
+console.log(getScore()); // "Chamakh scored 5"
+*/
