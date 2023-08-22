@@ -158,3 +158,15 @@ let item1 = filtered1.map(function(element){
 
 console.log(item1);
 */
+
+let arr = [1,2,3,4];
+// let total = 0;
+// for(let value of arr){
+//     total += value;
+// }
+// console.log(total);
+
+
+let totalSum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log('PRINTING TOTAL SUM');
+console.log(totalSum);
