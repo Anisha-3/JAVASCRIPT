@@ -47,10 +47,67 @@ let ans = add(1,2,3,4,5,6,7,8,9,10);
 console.log(ans);
 
 
-//      Rest Operator (gets stored in the array)(it is a last formal parameter)
+//      Rest Parameters/Operator (gets stored in the array)(it is a last formal parameter)
 function sum1(num, value, ...args){  
     console.log(args);
 }
 
 sum1(1,2,3,4,5,6);
+
+
+//              Default Parameters
+function interest(p, r = 6, y = 10){
+    return p*r*y/100;
+}
+
+console.log(interest(1000,8));
+
+
+//              GETTER SETTER
+//getter -> access properties
+//setter -> change or mutate properties
+
+let person = {
+    fname: 'Anisha',
+    lname: 'Asnani',
+    get fullName() {
+        return `${person.fname} ${person.lname}`;
+    },
+    set fullName(value) {
+        let parts = value.split(' ');
+        this.fname = parts[0];
+        this.lname = parts[1];
+    }
+};
+//Calling getter
+console.log(person.fullName);
+//Calling setter
+person.fullName = 'Sahil Bisht'
+console.log(person.fullName);
 */
+
+//              try-catch block
+
+let person = {
+    fname: 'Anisha',
+    lname: 'Asnani',
+    get fullName() {
+        return `${person.fname} ${person.lname}`;
+    },
+    set fullName(value) {
+        if(typeof value != String){
+            throw new Error("You have not sent a string");
+        }
+        let parts = value.split(' ');
+        this.fname = parts[0];
+        this.lname = parts[1];
+    }
+};
+try{
+    person.fullName = true;
+}
+catch(e){
+    alert(e);
+}
+
+console.log(person.fullName);
